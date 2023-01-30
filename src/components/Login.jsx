@@ -43,7 +43,7 @@ const Login = () => {
 
   const sendToDb = async() => {
    await axios
-      .post('http://127.0.0.1:3000/auth/login', details, { headers: {} })
+      .post('https://socialmediaapi-c6bn.onrender.com/auth/login', details, { headers: {} })
       .then((response) => {
         setLoginStatus(response.data.status);
         dispatch(authAction.saveToken(response.data.token));

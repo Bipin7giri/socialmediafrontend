@@ -16,20 +16,20 @@ const Profile = () => {
 
   const mode = useSelector((state) => state.mode.isMode);
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3000/auth/users/${gmail}`).then((response) => {
+    axios.get(`https://socialmediaapi-c6bn.onrender.com/auth/users/${gmail}`).then((response) => {
       dispatch(userAction.saveUser(response.data));
       setAuthId(response.data);
     });
   }, []);
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:3000/posts/userId/${gmail}`)
+      .get(`https://socialmediaapi-c6bn.onrender.com/posts/userId/${gmail}`)
       .then((response) => setPostById(response.data.postByID));
   }, []);
 
   // useEffect(() => {
   //   axios
-  //     .get(`http://127.0.0.1:3000/auth/followers/${gmail}`)
+  //     .get(`https://socialmediaapi-c6bn.onrender.com/auth/followers/${gmail}`)
   //     .then((response) => {
   //       // dispatch(userAction.saveUser(response.data.allUsers));
   //       dispatch(followingAction.saveFollowing(response.data?.following));

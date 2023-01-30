@@ -21,7 +21,7 @@ const authSlice = createSlice({
     },
     getEmail(state, action) {
       state.email = action.payload;
-      localStorage.setItem('email', JSON.stringify(state.email));
+      localStorage.setItem('email', state.email);
     },
     saveToken(state, action) {
       state.token = action.payload;

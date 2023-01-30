@@ -24,7 +24,7 @@ const Register = () => {
   const [status, setStatus] = useState('');
   const sendToDb = async() => {
   await  axios
-      .post('http://127.0.0.1:3000/auth/register', formData)
+      .post('https://socialmediaapi-c6bn.onrender.com/auth/register', formData)
       .then((response) => {
         setStatus(response.data.status);
         // alert(response.status);

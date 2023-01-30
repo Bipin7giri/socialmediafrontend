@@ -25,7 +25,7 @@ const AddPost = () => {
 
   const addToDb = () => {
     axios
-      .post('http://127.0.0.1:3000/posts', formData, {
+      .post('https://socialmediaapi-c6bn.onrender.com/posts', formData, {
         headers: {
           authorization: token,
         },

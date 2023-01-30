@@ -21,7 +21,7 @@ const Post = () => {
 
   const like = (postID) => {
     axios
-      .put('http://127.0.0.1:3000/posts/like', {
+      .put('https://socialmediaapi-c6bn.onrender.com/posts/like', {
         email: authEmail,
         id: postID,
       })
@@ -37,13 +37,13 @@ const Post = () => {
   const [post, setPost] = useState([]);
   const refreshPage = useSelector((state) => state.post.initialPost);
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3000/posts`).then((res) => {
+    axios.get(`https://socialmediaapi-c6bn.onrender.com/posts`).then((res) => {
       // setPost(res.data.allPosts);
       dispatch(postAction.savePost(res.data.allPosts));
     });
   }, [refreshPage]);
   const getAllPosts = () => {
-    axios.get(`http://127.0.0.1:3000/posts`).then((res) => {
+    axios.get(`https://socialmediaapi-c6bn.onrender.com/posts`).then((res) => {
       // setPost(res.data.allPosts);
       dispatch(postAction.savePost(res.data.allPosts));
     });
@@ -66,7 +66,7 @@ const Post = () => {
 
   const saveComment = (postID) => {
     axios
-      .put('http://127.0.0.1:3000/posts/comment', {
+      .put('https://socialmediaapi-c6bn.onrender.com/posts/comment', {
         comment: comment.comment,
         email: comment.email,
         id: postID,

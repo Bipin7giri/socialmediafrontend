@@ -3,25 +3,25 @@ import Active from './sidebar/Active';
 import Profile from './sidebar/Profile';
 import { useState, useEffect } from 'react';
 import io from 'socket.io-client';
-const socket = io.connect('http://localhost:3000');
+// const socket = io.connect('http://localhost:3000');
 const Test = () => {
-  const [message, setMessage] = useState('');
-  const [showMessage, setShowMessage] = useState([]);
-  const sendMessage = () => {
-    alert(message);
-    socket.emit('chat message', message);
-  };
-  useEffect(() => {
-    socket.on('recive message', (msg) => {
-      setShowMessage([...showMessage, msg]);
-    });
-  }, [socket]);
+  // const [message, setMessage] = useState('');
+  // const [showMessage, setShowMessage] = useState([]);
+  // const sendMessage = () => {
+  //   alert(message);
+  //   socket.emit('chat message', message);
+  // };
+  // useEffect(() => {
+  //   socket.on('recive message', (msg) => {
+  //     setShowMessage([...showMessage, msg]);
+  //   });
+  // }, [socket]);
 
   return (
     <div>
       <div class='h-screen w-full flex antialiased text-gray-200 bg-gray-900 overflow-hidden'>
         <div class='flex-1 flex flex-col'>
-          {showMessage}
+          {/* {showMessage} */}
           <div class='border-b-2 border-gray-800 p-2 flex flex-row z-20'>
             <div class='bg-red-600 w-3 h-3 rounded-full mr-2'></div>
             <div class='bg-yellow-500 w-3 h-3 rounded-full mr-2'></div>
@@ -147,7 +147,7 @@ const Test = () => {
                   <div class='messages text-sm text-gray-700 grid grid-flow-row gap-2'>
                     <div class='flex items-center group'>
                       <p class='px-6 py-3 rounded-t-full rounded-r-full bg-gray-800 max-w-xs lg:max-w-md text-gray-200'>
-                        {showMessage}
+                        {/* {showMessage} */}
                       </p>
                       <button
                         type='button'
@@ -785,7 +785,7 @@ C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.
                     <label>
                       <input
                         onKeyUp={(e) => {
-                          setMessage(e.target.value);
+                          // setMessage(e.target.value);
                         }}
                         class='rounded-full py-2 pl-3 pr-10 w-full border border-gray-800 focus:border-gray-700 bg-gray-800 focus:bg-gray-900 focus:outline-none text-gray-200 focus:shadow-md transition duration-300 ease-in'
                         type='text'
@@ -806,7 +806,7 @@ C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.
                   </div>
                   <button
                     onClick={() => {
-                      sendMessage();
+                      // sendMessage();
                     }}
                     type='button'
                     class='flex flex-shrink-0 focus:outline-none mx-2 block text-blue-600 hover:text-blue-700 w-6 h-6'

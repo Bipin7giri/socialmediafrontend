@@ -12,7 +12,7 @@ const SideBar = () => {
   const [notification, setNotification] = useState([]);
   const getNotification = () => {
     axios
-      .get(`http://127.0.0.1:3000/posts/notification/${withoutQuotesEmail}`)
+      .get(`https://socialmediaapi-c6bn.onrender.com/posts/notification/${withoutQuotesEmail}`)
       .then((response) => {
         setNotification(response.data.notification);
         // console.log(response.data.notification);

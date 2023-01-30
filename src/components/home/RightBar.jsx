@@ -28,7 +28,7 @@ function RightBar() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:3000/auth/followers/${authEmail}`)
+      .get(`https://socialmediaapi-c6bn.onrender.com/auth/followers/${authEmail}`)
       .then((response) => {
         setUsers(response.data);
       });
@@ -38,7 +38,7 @@ function RightBar() {
 
   const addFollow = (followID) => {
     axios
-      .post(`http://127.0.0.1:3000/auth/followers`, {
+      .post(`https://socialmediaapi-c6bn.onrender.com/auth/followers`, {
         followID,
         authEmail,
       })
