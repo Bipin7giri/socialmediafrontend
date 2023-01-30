@@ -296,7 +296,7 @@ const Post = () => {
             </div>
             <div className=''>
               {item['comments']?.map((item, id) => {
-                if (item.email) {
+                if (item) {
                   return (
                     <div class='w-full flex flex-start overflow-y-auto'>
                       <div class='w-1/2'>
@@ -313,7 +313,7 @@ const Post = () => {
                         </div>
 
                         <div class='mt-3 w-full bg-slate-50 p-4 rounded-b-xl rounded-tr-xl'>
-                          <p class=' text-sm text-slate-500'>{item.comment}</p>
+                          <p class=' text-sm text-slate-500'>{item?.comment}</p>
                         </div>
                       </div>
                     </div>
