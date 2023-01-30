@@ -61,8 +61,8 @@ const Login = () => {
   };
 
   return (
-    <div class='container mt-48 flex mx-auto items-center justify-center'>
-      <div class='left w-1/3 mx-14'>
+    <div class='container mt-48 lg:flex sm:flex-row mx-auto items-center justify-center'>
+      <div class='left lg:w-1/3 lg:block sm:hidden  mx-14'>
         <img
           class='w-80'
           src='fb.svg'
@@ -73,7 +73,7 @@ const Login = () => {
         </p>
       </div>
 
-      <div class='right flex flex-col bg-white p-8 rounded-xl w-1/4 text-lg relative'>
+      <div class='right flex flex-col bg-white p-8 rounded-xl lg:w-1/4 text-lg relative'>
         <h1 className='text-red-400'>{validate}</h1>
         <Formik
           initialValues={{
